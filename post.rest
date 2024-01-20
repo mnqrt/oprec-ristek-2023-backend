@@ -1,0 +1,15 @@
+GET http://localhost:4000/post/get-all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE2MmE4MGMzY2ZlNWRiOWQ3NjNjZSIsImlhdCI6MTcwNTU0NDczNiwiZXhwIjoxNzA1NTQ1NjM2fQ.-x1yO05vwmlTvA8HPq0EvRwhBj3BBScOpn1cZJqSmJ4
+
+###
+POST http://localhost:4000/post/create-post 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE1NzU3Njk4N2ZhN2IwNzg1Y2IxNCIsImlhdCI6MTcwNTUwMjE5MywiZXhwIjoxNzA1NTAzMDkzfQ.yKh9j-yxUFgQjqzMzpiJSZ0dPiibBRFwxjHboSdCuWs
+Content-Type: application/json
+
+{
+    "text": "eh kok kamu tau sih hehehehe jadi malu, aku lahir di makassar"
+}
+
+###
+DELETE http://localhost:4000/post/delete-all-posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE2MmE4MGMzY2ZlNWRiOWQ3NjNjZSIsImlhdCI6MTcwNTU0NDczNiwiZXhwIjoxNzA1NTQ1NjM2fQ.-x1yO05vwmlTvA8HPq0EvRwhBj3BBScOpn1cZJqSmJ4

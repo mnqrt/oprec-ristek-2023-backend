@@ -1,0 +1,67 @@
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "username": "addr",
+    "password": "akuaddr"
+}
+
+###
+DELETE http://localhost:4000/auth/delete-all
+
+###
+GET http://localhost:4000/auth/get-users
+
+###
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "username": "mnqrt",
+    "password": "akumnqrt"
+}
+
+###
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "username": "ayam",
+    "password": "aku"
+}
+
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "username": "ayam",
+    "password": "aku"
+}
+
+
+###
+
+DELETE http://localhost:4000/auth/logout
+
+###
+GET http://localhost:4000/auth/get-tokens
+
+###
+
+GET http://localhost:4000/auth/generate-token
+
+###
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "username": "ayam2",
+    "password": "aku2"
+}
+
+###
+DELETE http://localhost:4000/auth/delete-tokens
