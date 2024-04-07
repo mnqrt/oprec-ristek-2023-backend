@@ -1,4 +1,4 @@
-import mongoose, { Mongoose } from 'mongoose'
+import mongoose from 'mongoose'
 import User from '../interfaces/user.interface'
 
 const userSchema = new mongoose.Schema({
@@ -13,6 +13,6 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const userModel = mongoose.model<User & mongoose.Document>('userModel', userSchema)
+const UserModel = mongoose.model<User & mongoose.Document>('UserModel', userSchema)
 
-export default userModel
+export default UserModel

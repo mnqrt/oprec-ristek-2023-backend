@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import userModel from '../models/User';
+import UserModel from '../models/User';
 import User from '../interfaces/user.interface'
 import RequestWithUser from '../interfaces/requestWithUser.interface';
 import jwt from 'jsonwebtoken';
@@ -24,7 +24,7 @@ export async function authenticateToken(req: RequestWithUser, res: Response, nex
     try {
         const idObject = jwt.verify(token, (process.env as any).ACCESS_TOKEN_SECRET) as Id;
 
-        const user: User | null = await userModel.findById(idObject.id);
+        const user: User | null = await UserModel.findById(idObject.id);
         if (! user) {
             res.sendStatus(403)
             return;

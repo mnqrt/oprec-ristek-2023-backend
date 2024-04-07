@@ -1,15 +1,32 @@
 GET http://localhost:4000/post/get-all
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE2MmE4MGMzY2ZlNWRiOWQ3NjNjZSIsImlhdCI6MTcwNTU0NDczNiwiZXhwIjoxNzA1NTQ1NjM2fQ.-x1yO05vwmlTvA8HPq0EvRwhBj3BBScOpn1cZJqSmJ4
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNjE5MzEwNywiZXhwIjoxNzA2MTk0MDA3fQ.ooVer8yqgdvZq2OJ6IHK_3nKHzJNT_KVikGu8nvYj7M
 ###
 POST http://localhost:4000/post/create-post 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE1NzU3Njk4N2ZhN2IwNzg1Y2IxNCIsImlhdCI6MTcwNTUwMjE5MywiZXhwIjoxNzA1NTAzMDkzfQ.yKh9j-yxUFgQjqzMzpiJSZ0dPiibBRFwxjHboSdCuWs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNjE5MzEwNywiZXhwIjoxNzA2MTk0MDA3fQ.ooVer8yqgdvZq2OJ6IHK_3nKHzJNT_KVikGu8nvYj7M
 Content-Type: application/json
 
 {
-    "text": "eh kok kamu tau sih hehehehe jadi malu, aku lahir di makassar"
+    "text": "tesssss",
+    "isCloseFriend": true
 }
 
 ###
 DELETE http://localhost:4000/post/delete-all-posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE2MmE4MGMzY2ZlNWRiOWQ3NjNjZSIsImlhdCI6MTcwNTU0NDczNiwiZXhwIjoxNzA1NTQ1NjM2fQ.-x1yO05vwmlTvA8HPq0EvRwhBj3BBScOpn1cZJqSmJ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNjE1NDczNSwiZXhwIjoxNzA2MTU1NjM1fQ.HIIi3A4hff0nsyg_mygTozfeWynPSQTcgwAEcIv9_10
+
+###
+GET http://localhost:4000/close-friend/get-close-friend
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNTkxNDExNSwiZXhwIjoxNzA1OTE1MDE1fQ.Cjb8WGyaslIXfQ8dZ-5Bc2rs99sMRmBdXo3MeHDUZOg
+
+###
+DELETE http://localhost:4000/close-friend/delete-all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNTkxMzE3MCwiZXhwIjoxNzA1OTE0MDcwfQ.IkjEGy0j1CX2kqLvGb6b0WpJnSNXvVyG6fhP9DD0ASU
+
+###
+PATCH http://localhost:4000/close-friend/update-close-friend
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTkyYmFlM2I4OTk3YTU3MTA4NGNhZiIsImlhdCI6MTcwNTkxMzE3MCwiZXhwIjoxNzA1OTE0MDcwfQ.IkjEGy0j1CX2kqLvGb6b0WpJnSNXvVyG6fhP9DD0ASU
+Content-Type: application/json
+
+{
+    "updatedUserId": "65a92bb73b8997a571084cb1"
+}

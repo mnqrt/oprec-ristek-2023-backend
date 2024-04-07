@@ -12,14 +12,29 @@ const postSchema = new mongoose.Schema({
     },
     postedUser: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    postedUsername: {
+        type: String,
+    },
+    isCloseFriend: {
+        type: Boolean,
         required: true
     },
     likers: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'UserModel'
+    }],
+    likersUsername: [{
+        type: String
+    }],
+    replies: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'PostModel'
     }]
 })
 
-const postModel = mongoose.model<Post & mongoose.Document>('postModel', postSchema)
+const PostModel = mongoose.model<Post & mongoose.Document>('PostModel', postSchema)
 
-export default postModel
+export default PostModel

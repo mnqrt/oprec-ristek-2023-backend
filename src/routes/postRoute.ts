@@ -1,9 +1,8 @@
 import { Router } from "express";
 import { getAllPost, makePost, deleteAllPost, updateLike, updatePost, deletePost } from '../controllers/post.controller'
-import RequestWithUser from "../interfaces/requestWithUser.interface";
 import { authenticateToken } from "../middleware/authMiddleware";
 
-const postRouter = Router()
+const postRouter: Router = Router()
 
 postRouter.use(authenticateToken)
 

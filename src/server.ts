@@ -3,8 +3,9 @@ import express, { Express, Request, Response } from 'express';
 import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose';
 import cors from 'cors'
-import authRouter from './routes/authRoute'
+import authRouter from './routes/authRoute';
 import postRouter from './routes/postRoute';
+import closeFriendRouter from './routes/closeFriendRoute';
 
 const app = express()
 dotenv.config()
@@ -22,5 +23,6 @@ app.use(cors({
 app.use(express.json())
 app.use('/auth', authRouter)
 app.use('/post', postRouter)
+app.use('/close-friend', closeFriendRouter)
 
 app.listen(4000)
